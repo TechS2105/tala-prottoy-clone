@@ -1,0 +1,135 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans", sans-serif;;
+
+}
+
+header{
+
+    width: 25%;
+    height: 100%;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
+header > .logosection{
+
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    /* border-bottom: 1px solid #ffffff; */
+
+}
+
+header > .navsection{
+
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navsection > nav{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navsection nav > ul{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    text-align: center;
+    gap: 10px;
+    width: 80%;
+
+}
+
+.navsection nav ul > li{
+
+    width: 100%;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(220, 220, 220, 0.141);
+    padding: 10px 0px;
+    font-size: 18px;
+    color: rgba(220, 220, 220, 0.675);
+    transition: all 0.5s ease;
+    cursor: pointer;
+    letter-spacing: 1px;
+
+}
+
+.navsection nav ul li > a{
+
+    text-decoration: none;
+    color: rgba(220, 220, 220, 0.675);
+    transition: all 0.5s ease;
+    letter-spacing: 1px;
+
+}
+
+.navsection nav ul > li:hover{
+
+    color: #ffffff;
+
+}
+
+.navsection nav ul li > a:hover{
+
+    color: #ffffff;
+
+}
+
+/** Social Icon Section */
+header > .socialicon{
+
+    width: 100%;
+    height: 35%;
+    text-align: center;
+
+}
+
+/** Inner Social Icon Div */
+.socialicon > .inner-social-icon-section{
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 10px;
+
+}
+
+.inner-social-icon-section > i{
+
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+
+}
+
+.socialicon > p{
+
+    color: rgb(220, 220, 220);
+    font-size: 13px;
+    
+}
+

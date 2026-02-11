@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/Home/Home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <title>Tala Prottoy - Home</title>
+</head>
+<body>
+
+    <%- include('../partials/header.ejs') %>
+    
+    <!-- Parent Container -->
+    <div class="parent-container">
+
+        <main>
+
+                <!-- Home Banner -->
+                <div class="home-bannner-section">
+
+                    <!-- Swiper Section-->
+                    <div class="swiper homeBannerSwiper">
+
+                        <!-- Swiper Wrapper Section -->
+                        <div class="swiper-wrapper home-swiper-wrapper-section">
+
+                            <!-- Swiper Slider Section -->
+                            <% homeBanner.forEach((banner, idx) => { %>
+
+                                <div class="swiper-slide home-swiper-slider-section">
+
+                                    <img src="<%= banner.image %>" alt="<%= banner.altText %>">
+
+                                    <!-- Slider Content -->
+                                    <% if(banner.imageDetails) { %> 
+                                    
+                                        <div class="swiper-slide-content">
+
+                                            <h3><%= banner.imageDetails[0].title %></h3>
+                                            <p><%= banner.imageDetails[0].para  %></p>
+
+                                        </div>
+                                        
+                                    <% } %>
+                                    
+
+                                </div>
+
+                            <% }) %>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Intor Section -->
+                <div class="intor-section">
+
+                    <h2> Durga Puja Art </h2>
+                    <p>Tala Prattoy upholds the art aspects of Durga Puja. Essence of creativity combining the tools and methods of art and art installations interpreting the formative stages of the festival. Tala Prattoy’s work emphasis has always been on Durga Puja as a specific art genre where the public space is being transformed into an art venue. We are committed to make that art global.</p>
+
+                </div>
+
+                <!-- Card Section -->
+                <div class="home-card-section">
+
+                    <!-- Card Box -->
+                    <% homeCard.forEach((card, idx) => { %> 
+                    
+                        <div class="card-box">
+
+                            <!-- Inner Card Box -->
+                            <div class="inner-card-box">
+
+                                <!-- Image Box -->
+                                <div class="image-box">
+
+                                    <a href="#"><img src="<%= card.card_details[0].card_image %>" alt="<%= card.card_details[0].card_image_alttext %>"></a>
+
+                                </div>
+
+                                <!-- Content Box -->
+                                <div class="content-box">
+
+                                    <h3><a href="#"> <%= card.card_details[0].card_title %> </a></h3>
+
+                                    <% if(card.card_details[0].card_para){ %>
+
+                                        <p><%= card.card_details[0].card_para %></p>
+
+                                    <% } %>
+
+                                    <% if(card.card_details[0].card_para2) { %> 
+                                    
+                                        <p><%= card.card_details[0].card_para2 %></p>
+
+                                    <% } %>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        
+                    <% }) %>
+                    
+
+                </div>
+
+                <!-- Button Bar Section -->
+                <%- include('../partials/Buttonbar.ejs') %>
+
+                <!-- Proud Winner Section -->
+                <%- include('../partials/Proudwinner.ejs') %>
+
+        </main>
+
+        <%- include('../partials/footer.ejs') %>
+        
+    </div>
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="/js/Home/home.js"></script>
+
+</body>
+</html>

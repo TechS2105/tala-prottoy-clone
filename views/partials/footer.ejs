@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/Footer/Footer.css">
+</head>
+<body>
+    
+    <!-- Footer -->
+    <footer>
+
+        <!-- Proud Participant -->
+        <div class="proud-participant">
+
+            <!-- Image Box -->
+            <% homProudParticipant.forEach((proud_participant, idx) => { %> 
+            
+                <div class="image-box">
+
+                    <img src="<%= proud_participant.pp_image %>" alt="<%= proud_participant.pp_image_altText %>">
+
+                </div>
+                
+            <% }) %>
+            
+
+        </div>
+
+        <!-- Footer Copyright -->
+        <div class="footer-copyright">
+
+            <p>&copy; 2022 All Rights Reserved. | Powered By-<a href="#">Anttech</a></p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
