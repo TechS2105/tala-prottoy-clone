@@ -67,7 +67,7 @@ const about_page_api = [
 
                     {
 
-                        thid_section: {
+                        third_section: {
 
                             title: 'Our Mission',
                             list_items: [

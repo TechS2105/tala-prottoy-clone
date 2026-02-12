@@ -18,93 +18,107 @@
         <!-- Main -->
         <main>
 
-            <!-- Banner Image Container -->
-            <div class="page_banner_single_image_section">
+            <% about.forEach((aboutItem) => { %> 
             
-                <img src="/images/Banner/about_banner.jpg" alt="">
-            
-            </div>
-
-            <!-- Content Section -->
-            <div class="about-page-content-section">
-
-                <!-- About Intro Section -->
-                <div class="about-page-intro-div">
-
-                    <!-- Inner Intro Section -->
-                    <div class="about-inner-intro-div">
-
-                        <h2> Tala Prattoy </h2>
-                        <p>Tala Prattoy Society is a Kolkata-based socio-culturally inclined organization. We are a not-for-profit organization
-                        where proceeds are to be utilized for making art objects and artists. Tala Prattoy is a home for public art in the
-                        sphere of installation & sculpture and enhancing skill. We are committed to make art available for exhibition,
-                        decoration, display and learning. We always try to work to reach luxury art destination with our community activated art
-                        arena.</p>
-
-                    </div>
+                <!-- Banner Image Container -->
+                <div class="page_banner_single_image_section">
+                
+                    <img src="<%= aboutItem.about_page_details[0].about_banner_image %>" alt="<%= aboutItem.about_page_details[0].about_banner_image_alttext %>">
                 
                 </div>
 
-                <!-- About Our Vision -->
-                <div class="about-our-vision">
+                <!-- Content Section -->
+                <div class="about-page-content-section">
 
-                    <!-- Inner Our Vision -->
-                    <div class="about-inner-our-vision">
+                    <!-- About Intro Section -->
+                    <div class="about-page-intro-div">
 
-                        <h2>Our Vision</h2>
-                        <ul>
+                        <!-- Inner Intro Section -->
+                        <div class="about-inner-intro-div">
 
-                            <li>To be committed in the promotion of art, culture & heritage.</li>
-                            <li>To encourage, enhance art and expand its reach to global arena.</li>
-                            <li>To be a leading and vibrant organisation of excellence in installation art and sculpture.</li>
-                            <li>To build an integrated modern system of skill development for a good today and a better tomorrow.</li>
-                            <li>To enhance the core identity to the global extent.</li>
+                            <h2> <%= aboutItem.about_page_details[0].about_page_contents[0].first_section.title %> </h2>
+                            <p> <%= aboutItem.about_page_details[0].about_page_contents[0].first_section.para %> </p>
 
-                        </ul>
+                        </div>
+                    
+                    </div>
+
+                    <!-- About Our Vision -->
+                    <div class="about-our-vision">
+
+                        <!-- Inner Our Vision -->
+                        <div class="about-inner-our-vision">
+
+                            <h2><%= aboutItem.about_page_details[0].about_page_contents[1].second_section.title %></h2>
+
+                            <ul>
+
+                                <% aboutItem.about_page_details[0].about_page_contents[1].second_section.list_items.forEach((items) => { %> 
+                            
+                                    <li> <%= items.first_item  %></li>
+                                    <li> <%= items.second_item  %></li>
+                                    <li> <%= items.third_item  %></li>
+                                    <li> <%= items.fourth_item  %></li>
+                                    <li> <%= items.fifth_item  %></li>
+                                
+                                <% }) %>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <!-- About Our Mission -->
+                    <div class="about-our-mission">
+
+                        <!-- Inner Our Mission -->
+                        <div class="about-inner-our-mission">
+
+                            <h2> <%= aboutItem.about_page_details[0].about_page_contents[2].third_section.title %> </h2>
+                            <ul>
+
+                                <% aboutItem.about_page_details[0].about_page_contents[2].third_section.list_items.forEach((items) => { %> 
+                                
+                                    <li><%= items.first_item %></li>
+                                    <li><%= items.second_item %></li>
+                                    <li><%= items.third_item %></li>
+                                    
+                                <% }) %>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <!-- About Thrust Area -->
+                    <div class="about-thrust-area">
+
+                        <!-- Inner Thrust Area -->
+                        <div class="about-inner-thrust-area">
+
+                            <h2><%= aboutItem.about_page_details[0].about_page_contents[3].fourth_section.title %></h2>
+                            <ul>
+
+                                <% aboutItem.about_page_details[0].about_page_contents[3].fourth_section.list_items.forEach((items) => { %> 
+                                
+                                    <li><%= items.first_item %></li>
+                                    <li><%= items.second_item %></li>
+                                    <li><%= items.third_item %></li>
+
+                                <% }) %>
+                                
+
+                            </ul>
+
+                        </div>
 
                     </div>
 
                 </div>
-
-                <!-- About Our Mission -->
-                <div class="about-our-mission">
-
-                    <!-- Inner Our Mission -->
-                    <div class="about-inner-our-mission">
-
-                        <h2> Our Mission </h2>
-                        <ul>
-
-                            <li>To set the benchmark of performance in art field.</li>
-                            <li>To foster an environment for the promotion of creative thinking.</li>
-                            <li>To be a creative hub of original, innovative and quality art and artist.</li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
-                <!-- About Thrust Area -->
-                <div class="about-thrust-area">
-
-                    <!-- Inner Thrust Area -->
-                    <div class="about-inner-thrust-area">
-
-                        <h2>Thrust Area</h2>
-                        <ul>
-
-                            <li>Creation of temporary work of art whose impact, message and notion behind it would remain forever.</li>
-                            <li>The application of aesthetics in creative piece of installation art and sculpture.</li>
-                            <li>Skill development comprises of conventional art techniques as well as modern emerging mediums.</li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
+            
+            <% }) %>
 
             <!-- Button Bar Section -->
             <%- include('../partials/Buttonbar.ejs') %>
