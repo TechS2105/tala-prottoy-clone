@@ -1,0 +1,208 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+
+}
+
+body{
+
+    width: 100%;
+    height: auto;
+    position: relative;
+
+}
+
+/** Parent Container */
+.parent-container{
+
+    width: 77%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #101010;
+    overflow: hidden;
+
+}
+
+/** Page Banner Single Image Section */
+.page_banner_single_image_section {
+
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 130px 0px 50px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.page_banner_single_image_section>img {
+
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/** About Page Content Section */
+.about-page-content-section{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 30px;
+
+}
+
+.about-page-content-section > .about-page-intro-div{
+
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.about-page-intro-div > .about-inner-intro-div{
+
+    margin-left: 40px;
+
+}
+
+.about-inner-intro-div > h2{
+
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 30px;
+
+}
+
+.about-inner-intro-div > p{
+
+    color: #ffffff7d;
+    font-size: 16px;
+    line-height: 25px;
+
+}
+
+/** About Our Vision */
+.about-page-content-section > .about-our-vision{
+
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.about-our-vision > .about-inner-our-vision{
+
+    margin-left: 40px;
+
+}
+
+.about-inner-our-vision > h2{
+
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #ffffff;
+
+}
+
+.about-inner-our-vision > ul{
+
+    color: #ffffff7d;
+    line-height: 30px;
+    list-style-type: none;
+
+}
+
+.about-inner-our-vision ul > li{
+
+    font-size: 16px;
+
+}
+
+/** About Page Mission Section */
+.about-page-content-section > .about-our-mission{
+
+    width: 100%;
+    /* background-color: aliceblue; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.about-our-mission > .about-inner-our-mission{
+
+    margin-left: 40px;
+
+}
+
+.about-inner-our-mission > h2{
+
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 20px;
+
+}
+
+.about-inner-our-mission > ul{
+
+    list-style-type: none;
+    color: #ffffff7d;
+    line-height: 30px;
+
+}
+
+.about-inner-our-mission ul > li{
+
+    font-size: 16px;
+
+}
+
+/** About Thrust Area */
+.about-page-content-section > .about-thrust-area{
+
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* background-color: aliceblue; */
+
+}
+
+.about-thrust-area > .about-inner-thrust-area{
+
+    margin-left: 40px;
+
+}
+
+.about-inner-thrust-area > h2{
+
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+
+.about-inner-thrust-area > ul{
+
+    list-style-type: none;
+    color: #ffffff7d;
+    line-height: 30px;
+
+}
+
+.about-inner-thrust-area ul > li{
+
+    font-size: 16px;
+
+}
