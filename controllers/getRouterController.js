@@ -28,9 +28,22 @@ const getAboutRouter = (req, res) => {
 
 }
 
+/** Contact Router */
+const getContactRouter = (req, res) => {
+
+    res.render('../views/Contact/Contact.ejs', {
+        
+        proudParticipant: HomeProudParticipantApi,
+        pageName: "contact"
+
+    });
+
+}
+
 export default {
 
     getHomeRouter,
-    getAboutRouter
+    getAboutRouter,
+    getContactRouter
 
 }

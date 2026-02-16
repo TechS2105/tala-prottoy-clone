@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/Favicon/favicon.png">
+    <link rel="stylesheet" href="/styles/Contact/Contact.css">
+    <title>Contact - Tala Prottoy </title>
+</head>
+<body>
+    
+    <!-- Header -->
+    <%- include('../partials/header.ejs') %>
+
+    <!-- Parent Main Section -->
+    <div class="parent-main-section">
+
+        <main>
+
+            <!-- Map Section -->
+            <div class="map-section">
+
+                <!-- Inner Map Section -->
+                <div class="inner-map-section">
+
+                    <!-- Title Section -->
+                    <div class="map-title-section">
+
+                        <span> Location </span>
+                        <h1> Write To Us </h1>
+
+                    </div>
+
+                    <!-- Main Map Section -->
+                    <div class="main-map-section">
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.2056074166408!2d88.37992707475819!3d22.60879603164384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02770066793be3%3A0xa2bba210b58b73f6!2sTala%20Prattoy%20Durga%20Puja%20Art!5e0!3m2!1sen!2sin!4v1770906801906!5m2!1sen!2sin"
+                            width="1100" height="460" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Form & Address Section -->
+            <div class="form-address-section">
+
+                <!-- Address Section -->
+                <div class="address-section">
+
+                    <!-- Inner Address Section -->
+                    <div class="inner-address-section">
+
+                        <h2>Feel Free to Contact Us</h2>
+                        <address>
+
+                            <p><span>Phone:</span> (+91) 74396 18109</p>
+                            <p><span>Phone:</span> (+91) 8274 070767</p>
+                            <p><span>Email:</span> info@talaprattoy.com</p>
+                            <p><span>Address:</span> India, Kolkata, Tala, 8/1 Rajkumar Chatterjee Road, Zip -700 037.</p>
+
+                        </address>
+
+                    </div>
+
+                </div>
+
+                <!-- Form Section -->
+                <div class="form-section">
+
+                    <!-- Form Title Section -->
+                    <div class="form-title-section">
+
+                        <h2>Interested to work with us?</h2>
+
+                    </div>
+
+                    <!-- Form -->
+                    <%- include('../partials/Form.ejs', {pageName: pageName}) %>
+
+                </div>
+
+            </div>
+
+            <!-- Button Bar -->
+            <%- include('../partials/Buttonbar.ejs') %>
+
+            <!-- Proud Winner -->
+            <%- include('../partials/Proudwinner.ejs') %>
+
+        </main>
+
+        <!-- Footer -->
+        <%- include('../partials/footer.ejs') %>
+
+    </div>
+
+</body>
+</html>

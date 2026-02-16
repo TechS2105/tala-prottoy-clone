@@ -1,0 +1,166 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+
+}
+
+body{
+
+    width: 100%;
+    height: auto;
+    background-color: #101010;
+    position: relative;
+
+}
+
+/** Parent Main Section */
+.parent-main-section{
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 77%;
+    height: auto;
+    
+}
+
+/** Main Section */
+.parent-main-section > main{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+/** Map Section */
+main > .map-section{
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/** Inner Map Section */
+.map-section > .inner-map-section{
+
+    width: auto;
+    height: auto;
+
+}
+
+.inner-map-section > .map-title-section{
+
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.map-title-section > span{
+
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    display: inline-flex;
+    color: #ffffff81;
+
+}
+
+.map-title-section > h1{
+
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 2px;
+
+}
+
+.inner-map-section > .main-map-section{
+
+    height: auto;
+    width: auto;
+
+}
+
+/** Form & Address Section */
+main > .form-address-section{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px 50px 0px;
+
+}
+
+/** Address Section */
+.form-address-section > .address-section{
+
+    width: 50%;
+    height: 100%;
+
+}
+
+.address-section > .inner-address-section{
+
+    margin-left: 40px;
+
+}
+
+.inner-address-section > h2{
+
+    color: #ffffff;
+    font-size: 23px;
+
+}
+
+.inner-address-section > address{
+
+    margin-top: 25px;
+    color: #ffffff81;
+
+}
+
+.inner-address-section address > p{
+
+    font-size: 15px;
+    margin-bottom: 25px;
+
+}
+
+.inner-address-section address p > span{
+
+    color: #ffffff;
+    letter-spacing: 1px;
+
+}
+
+/** Form Section */
+.form-address-section > .form-section{
+
+    width: 50%;
+    height: 100%;
+
+
+}
+
+/** Form Title Section */
+.form-section > .form-title-section{
+
+    height: 5%;
+    margin-left: 20px;
+
+}
+
+.form-title-section > h2{
+
+    color: #ffffff;
+    font-size: 23px;
+    letter-spacing: 1px;
+
+}
+

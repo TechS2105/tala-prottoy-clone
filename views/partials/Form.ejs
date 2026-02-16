@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/Form/Form.css">
+</head>
+<body>
+    
+    <!-- Form Section -->
+    <div class="form-section">
+
+        <span> Fill & Submit </span>
+
+        <form action='/api/send/form/<%= pageName %>'  method="post">
+
+            <!-- First Input -->
+            <div class="first-input">
+
+                <input type="text" id="name" placeholder="Your Name *" name="fullname" required>
+
+            </div>
+
+            <!-- Second Input -->
+            <% if(pageName === 'contact' || pageName === 'skilldev'|| pageName === 'artwork'){ %> 
+
+                <div class="second-input">
+
+                    <input type="email" id="mail" name="email"  placeholder="Your Email *" required>
+
+                    <% if(pageName === 'contact' || pageName === 'artwork'){ %> 
+                    
+                        <input type="tel" id="mobile" name="mobile"  placeholder="Your Number *" minlength="10" maxlength="10" required>
+                        
+                    <% } %> 
+                    
+                    <% if(pageName === 'skilldev') { %> 
+                    
+                        <input type="text" id="specialiation" name="specialiation" placeholder="Specialiation *" required>
+                        
+                    <% } %>
+
+                </div>
+
+            <% } %>
+
+            <!-- Additional Inputs Page Wise -->
+            <% if(pageName === 'artwork' || pageName === 'privilegeentry' && pageName !== 'skilldev') { %> 
+                
+                <!-- Art Work Page Input -->
+                <div class="artwork-input">
+
+                    <input type="text" id="address" name="address" placeholder="Address *" required>
+
+                </div>
+
+                <!-- No Of Guest -->
+                <div class="no-of-guest">
+
+                    <select name="guestno" id="guestno">
+
+                        <option value="No Of Guest" hidden> No Of Guest </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Date Input -->
+                <div class="calender-input">
+
+                    <input type="date" name="date" id="date" required>
+
+                </div>
+
+                <!-- Time Input -->
+                <div class="time-input">
+
+                    <select name="time" id="time">
+
+                        <option value="Select Time" hidden> Select Time </option>
+                        <option value="6 PM"> 6 PM </option>
+                        <option value="9 PM"> 9 PM </option>
+                        <option value="12 AM"> 12 AM </option>
+
+                    </select>
+
+                </div>
+                
+            <% } %>
+
+            <% if(pageName === 'privilegeentry' && pageName !== 'artwork') { %> 
+            
+                <!-- Reason Input -->
+                <div class="reason-input">
+
+                    <select name="reason" id="reason">
+
+                        <option value="Select Reason" hidden> Select Reason </option>
+                        <option value="Differently abled person"> Differently abled person </option>
+                        <option value="Aged person with restrited movement"> Aged person with restrited movement </option>
+                        <option value="Pregnant"> Pregnant </option>
+                        <option value="National Security Force | Police"> National Security Force | Police </option>
+                        <option value="Journalist | Media Person"> Journalist | Media Person </option>
+                        <option value="Artist | Galleriest"> Artist | Galleriest </option>
+                        <option value="Art Curator | Art Researcher"> Art Curator | Art Researcher </option>
+                        <option value="Foreigner | NRI"> Foreigner | NRI </option>
+
+                    </select>
+
+                </div>
+                
+            <% } %>
+
+            <!-- Text Area -->
+            <% if(pageName === 'contact' || pageName === 'skilldev'){ %> 
+            
+                <div class="third-input">
+
+                    <textarea name="message" id="message" placeholder="Message *"  required></textarea>
+
+                </div>
+                
+            <% } %>
+            
+
+            <!-- Button -->
+            <div class="button-section">
+
+                <button type="submit">
+                
+                    <% if(pageName === 'contact') { %> 
+                    
+                        Send Message 
+
+                    <% } else { %> 
+                    
+                        Submit
+                        
+                    <% } %>
+                    
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
