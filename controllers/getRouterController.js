@@ -2,6 +2,8 @@ import HomeBannerApi from '../api/Home/home_banner_api.js';
 import HomeCardApi from '../api/Home/home_card_api.js';
 import HomeProudParticipantApi from '../api/Home/home_proud_participant_api.js';
 import AboutPageApi from '../api/About/about_page_api.js';
+import GalleryStillImagesApi from '../api/Still/still_api.js';
+import GalleryVideo from '../api/Video/gallery_video_api.js';
 
 /** Home Router */
 const getHomeRouter = (req, res) => {
@@ -40,10 +42,36 @@ const getContactRouter = (req, res) => {
 
 }
 
+/** Gallery Still Image Router */
+const getGalleryStillImageRouter = (req, res) => {
+
+    res.render('../views/Gallery/still/still.ejs', {
+        
+        stillImageData: GalleryStillImagesApi,
+        proudParticipant: HomeProudParticipantApi
+
+    });
+
+}
+
+/** Gallery Video Router */
+const getGalleryVideoRouter = (req, res) => {
+
+    res.render('../views/Gallery/video/video.ejs', {
+
+        galleryVideo: GalleryVideo,
+        proudParticipant: HomeProudParticipantApi
+
+    });
+
+}
+
 export default {
 
     getHomeRouter,
     getAboutRouter,
-    getContactRouter
+    getContactRouter,
+    getGalleryStillImageRouter,
+    getGalleryVideoRouter
 
 }

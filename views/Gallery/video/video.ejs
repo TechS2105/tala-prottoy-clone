@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video: Tala Prattoy</title>
+    <link rel="stylesheet" href="/styles/video/video.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <%- include('../../partials/header.ejs') %>
+
+    <!-- Video Main Parent Section -->
+    <div class="video-parent-section">
+
+        <main>
+
+            <!-- Inner Video Section -->
+            <div class="inner-video-section">
+
+                <!-- Video Box Section -->
+                <div class="video-box-section">
+
+                    <!-- Title -->
+                    <div class="title-section">
+
+                        <h1> Video </h1>
+
+                    </div>
+
+                    <!-- Video -->
+                    <% galleryVideo.forEach((videoItem) => { %> 
+
+                        <div class="video-section">
+
+                            <!-- Video Box -->
+                            <% videoItem.videos.forEach((videoObj) => { %> 
+                                        
+                                <iframe src="<%= videoObj %>" title="<%= videoItem.video_title %>" frameborder="0" allow="accelerometer; mute; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                            <% }) %>
+                            
+                        </div>
+
+                    <% }) %>
+
+                </div>
+
+            </div>
+
+            <!-- Button Bar -->
+            <%- include('../../partials/Buttonbar.ejs') %>
+
+            <!-- Proud Winner -->
+            <%- include('../../partials/Proudwinner.ejs') %>
+
+        </main>
+
+        <!-- Footer -->
+        <%- include('../../partials/footer.ejs') %>
+
+    </div>
+
+</body>
+</html>

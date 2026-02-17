@@ -1,0 +1,109 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+
+}
+
+body{
+
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: #101010;
+
+}
+
+/** Gallery Still Image Parent Section */
+.gallery-still-image-parent-section{
+
+    width: 77%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+/** Still Image Inner Section */
+.gallery-still-image-parent-section > .gallery-inner-still-image-section{
+
+    width: 100%;
+    height: auto;
+
+}
+
+.gallery-inner-still-image-section > .still-image-inner-section{
+
+    width: 100%;
+    height: 100%;
+    padding: 60px 0px 40px 0px;
+
+}
+
+/** Still Image Section */
+.still-image-inner-section > .still-image-section{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+/** Title Section */
+.still-image-section > .still-title-section{
+
+    height: 130px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.still-title-section > h2{
+
+    font-size: 30px;
+    color: #ffffff;
+
+}
+
+/** Image Section */
+.still-image-section > .image-section{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+/** Image Inner Section */
+.image-section > .image-inner-section{
+
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.image-inner-section > .inner-image-div{
+
+    width: 360px;
+    height: 250px;
+
+}
+
+.inner-image-div > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}

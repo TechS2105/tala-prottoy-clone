@@ -6,6 +6,8 @@ const router = express.Router();
 
 router.get('/', getRouterController.getHomeRouter); // index router
 router.get('/about', getRouterController.getAboutRouter); // about router
+router.get('/still', getRouterController.getGalleryStillImageRouter); // gallery still image router
+router.get('/video', getRouterController.getGalleryVideoRouter); // gallery video router
 router.get('/contact', getRouterController.getContactRouter); // contact router
 router.post('/api/send/form/:pageName', postRouterController.postContactForm); // Mail Router
 

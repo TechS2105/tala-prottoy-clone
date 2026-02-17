@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Still: Tala Prattoy</title>
+    <link rel="icon" href="/images/Favicon/favicon.png">
+    <link rel="stylesheet" href="/styles/still/still.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <%- include('../../partials/header.ejs') %>
+
+    <!-- Gallery still image parent section -->
+    <div class="gallery-still-image-parent-section">
+
+        <main>
+
+            <!-- Gallery still image section -->
+            <div class="gallery-inner-still-image-section">
+
+                <!-- Still image inner section -->
+                <div class="still-image-inner-section">
+
+                    <!-- Still image section -->
+                    <% stillImageData.forEach((imageData, idx) => { %> 
+                    
+                        <div class="still-image-section">
+
+                            <!-- Title Section -->
+                            <div class="still-title-section">
+
+                                <h2> <%= imageData.still_date %> </h2>
+
+                            </div>
+
+                            <!-- Image Section -->
+                            <div class="image-section">
+
+                                <!-- Image Inner Section -->
+                                <div class="image-inner-section">
+
+                                    <!-- Inner image div -->
+                                    <% imageData.images.forEach((imgObj) => { %> 
+                                    
+                                        <div class="inner-image-div">
+
+                                                <img 
+                                                
+                                                    src="<%= imgObj %>" 
+                                                    loading="lazy"
+                                                    decoding="async"
+                                                    
+                                                >
+
+                                        </div>
+                                        
+                                    <% }) %>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        
+                    <% }) %>
+
+                </div>
+
+            </div>
+
+            <!-- Button bar -->
+            <%- include('../../partials/Buttonbar.ejs') %>
+
+            <!-- Proud Winner -->
+            <%- include('../../partials/Proudwinner.ejs') %>
+
+        </main>
+        
+        <!-- Footer -->
+        <%- include('../../partials/footer.ejs') %>
+        
+
+    </div>
+
+</body>
+</html>
