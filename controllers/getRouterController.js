@@ -4,6 +4,8 @@ import HomeProudParticipantApi from '../api/Home/home_proud_participant_api.js';
 import AboutPageApi from '../api/About/about_page_api.js';
 import GalleryStillImagesApi from '../api/Still/still_api.js';
 import GalleryVideo from '../api/Video/gallery_video_api.js';
+import PromotionOfInstallationArt from '../api/Promotion Of Installation Art/promotion_of_installation_art.js';
+import SkillDevelopmentItems from '../api/Skill Development/skill_development_api.js';
 
 /** Home Router */
 const getHomeRouter = (req, res) => {
@@ -66,12 +68,39 @@ const getGalleryVideoRouter = (req, res) => {
 
 }
 
+/** Objective Promotion Of Installatio Art */
+const getObjectivePromotionOfInstallationArt = (req, res) => {
+
+    res.render('../views/Objective/Promotion Of Installation Art/promotionOfInstallationArt.ejs', {
+
+        proudParticipant: HomeProudParticipantApi,
+        promotionOfInstallation: PromotionOfInstallationArt 
+
+    });
+
+}
+
+/** Objective Skill Development */
+const getObjectiveSkillDevelopment = (req, res) => {
+
+    res.render('../views/Objective/Skill Development/skill_development.ejs', {
+
+        pageName: "skilldev",
+        proudParticipant: HomeProudParticipantApi,
+        skillDevelopmentItem: SkillDevelopmentItems
+
+    });
+
+}
+
 export default {
 
     getHomeRouter,
     getAboutRouter,
     getContactRouter,
     getGalleryStillImageRouter,
-    getGalleryVideoRouter
+    getGalleryVideoRouter,
+    getObjectivePromotionOfInstallationArt,
+    getObjectiveSkillDevelopment
 
 }

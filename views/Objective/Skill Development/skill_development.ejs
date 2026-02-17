@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/images/Favicon/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/Skill Development/skill_development.css">
+    <title>Skill Development: Tala Prattoy</title>
+</head>
+<body>
+    
+    <!-- Header -->
+    <%- include('../../partials/header.ejs') %>
+
+    <!-- Skill Development Parent Container -->
+    <div class="skill-development-parent-container">
+
+        <main>
+
+            <!-- Inner Container -->
+            <% skillDevelopmentItem.forEach((item) => { %> 
+            
+                <div class="skill-development-inner-container">
+
+                    <!-- Image Container -->
+                    <div class="skill-development-image-container">
+
+                        <img src="<%= item.hero_image %>" alt="<%= item.image_alttext%>">
+
+                    </div>
+
+                    <!-- Content Container -->
+                    <div class="skill-development-content-container">
+
+                        <!-- Skill Development -->
+                        <div class="skill-development">
+
+                            <!-- Title -->
+                            <div class="skill-development-title">
+
+                                <h2><%= item.details[0].title  %></h2>
+
+                            </div>
+
+                            <!-- Para -->
+                            <div class="skill-development-content">
+
+                                <p><%= item.details[0].para %></p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Purpose -->
+                        <div class="purpose">
+
+                            <!-- Title -->
+                            <div class="purpose-title">
+
+                                <h2><%= item.details[1].title %></h2>
+
+                            </div>
+
+                            <!-- Para -->
+                            <div class="purpose-para">
+
+                                <ul>
+
+                                    <% item.details[1].list_items.forEach((listItemObj) => { %> 
+                                    
+                                        <li><%= listItemObj %></li>
+                                        
+                                    <% }) %>
+                                    
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Interested to work with us -->
+                        <div class="interested-to-work-container">
+
+                            <!-- Title -->
+                            <div class="interested-to-work-title">
+
+                                <h2>Interested to work with us?</h2>
+
+                            </div>
+
+                            <!-- Form -->
+                            <div class="interested-to-work-form">
+
+                                <%- include('../../partials/Form.ejs', {pageName: pageName}) %>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+        
+                </div>
+                
+            <% }) %>
+            
+            <!-- Button Bar -->
+            <%- include('../../partials/Buttonbar.ejs') %>
+
+            <!-- Proude Winner -->
+            <%- include('../../partials/Proudwinner.ejs') %>
+
+        </main>
+
+        <!-- Footer -->
+        <%- include('../../partials/footer.ejs') %>
+
+    </div>
+
+</body>
+</html>

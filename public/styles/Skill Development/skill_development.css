@@ -1,0 +1,196 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+
+}
+
+body{
+
+    width: 100%;
+    height: 100%;
+    background-color: #101010;
+    position: relative;
+
+}
+
+/** Skill Development Parent Container */
+.skill-development-parent-container{
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 77%;
+    height: auto;
+
+}
+
+/*** Inner Container */
+.skill-development-parent-container main > .skill-development-inner-container{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0px 30px 0px;
+
+}
+
+/** Image Container */
+.skill-development-inner-container > .skill-development-image-container{
+
+    width: 95%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.skill-development-image-container > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+
+}
+
+/** Content Container */
+.skill-development-inner-container > .skill-development-content-container{
+
+    width: 95%;
+    height: 100%;
+    margin-top: 30px;
+
+}
+
+/** Skill Development Content Container */
+.skill-development-content-container > .skill-development{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+/** Title */
+.skill-development > .skill-development-title{
+
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.skill-development-title > h2{
+
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 1px;
+
+}
+
+/** Para */
+.skill-development > .skill-development-content{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.skill-development-content > p{
+
+    color: #ffffff75;
+    line-height: 30px;
+    font-size: 16.5px;
+
+}
+
+/** Purpose Content Container */
+.skill-development-content-container > .purpose{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+/** Title */
+.purpose > .purpose-title{
+
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.purpose-title > h2{
+
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 1px;
+
+}
+
+/** Para */
+.purpose > .purpose-para{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.purpose-para > ul{
+
+    list-style-type: none;
+
+}
+
+.purpose-para ul > li{
+
+    color: #ffffff75;
+    margin-bottom: 10px;
+    font-size: 15px;
+
+}
+
+/** Interested To Work With Us */
+.skill-development-content-container > .interested-to-work-container{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+/** Title */
+.interested-to-work-container > .interested-to-work-title{
+
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.interested-to-work-title > h2{
+
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 1px;
+
+}
+
+/** Form */
+.interested-to-work-container > .interested-to-work-form{
+
+    width: 65%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}

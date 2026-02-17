@@ -10,7 +10,11 @@
     <!-- Form Section -->
     <div class="form-section">
 
-        <span> Fill & Submit </span>
+        <% if(pageName !== 'skilldev') { %> 
+        
+            <span> Fill & Submit </span>
+            
+        <% } %>
 
         <form action='/api/send/form/<%= pageName %>'  method="post">
 

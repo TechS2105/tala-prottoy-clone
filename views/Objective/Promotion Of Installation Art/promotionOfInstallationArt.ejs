@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/images/Favicon/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotion Of Installation Art: Tala Prattoy</title>
+    <link rel="stylesheet" href="/styles/Promotion Of Installation/promotionart.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <%- include('../../partials/header.ejs') %>
+
+    <!-- Promotion Of Installation Art Parent Container -->
+    <div class="promotion-of-installation-parent-container">
+
+        <main>
+
+            <!-- Inner Container -->
+            <% promotionOfInstallation.forEach((item) => { %> 
+            
+                <div class="promotion-art-inner-container">
+
+                    <!-- Image Container -->
+                    <div class="image-container">
+
+                        <img src="<%= item.image %>" alt="<%= item.image_alttext%>">
+
+                    </div>
+
+                    <!-- Title Section -->
+                    <div class="title-section">
+
+                        <h1><%= item.details[0].title %></h1>
+
+                    </div>
+
+                    <!-- Content Section -->
+                    <div class="content-section">
+
+                        <ul>
+
+                            <% item.details[0].list_items.forEach((listObj) => { %> 
+                            
+                                <li><%= listObj %></li>
+                                
+                            <% }) %>
+
+                        </ul>
+
+                    </div>
+
+                </div> 
+                
+            <% }) %>
+
+            <!-- Button Bar  -->
+            <%- include('../../partials/Buttonbar.ejs') %>
+
+            <!-- Proud Winner -->
+            <%- include('../../partials/Proudwinner.ejs') %>
+
+        </main>
+
+        <!-- Footer -->
+        <%- include('../../partials/footer.ejs') %>
+
+    </div>
+
+</body>
+</html>
