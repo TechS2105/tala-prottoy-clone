@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/Durga Puja Art Years/2026_details.css">
+</head>
+<body>
+    
+    <!-- Details Section -->
+    <div class="details_section">
+
+        <!-- Title Section -->
+        <div class="title-section">
+
+            <h1><%= event.event_details[0].title %></h1>
+
+        </div>
+
+        <!-- Para Section -->
+        <div class="para-section">
+
+            <p><%= event.event_details[0].para %></p>
+
+        </div>
+
+        <!-- General Entry Section -->
+        <div class="general-entry-section">
+
+            <!-- Title Section -->
+            <div class="general-entry-title-section">
+
+                <h3> <%= event.event_details[1].title %> </h3>
+
+            </div>
+
+            <!-- Date & Time Section -->
+            <div class="general-entry-date-time-section">
+
+                <!-- Inner Date & Time Section -->
+                <div class="inner-date-time-section">
+
+                    <p><span>Date : :</span> <%= event.event_details[1].details.date %></p>
+                    <p><span>Time:</span> <%= event.event_details[1].details.time %></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

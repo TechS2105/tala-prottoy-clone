@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/Favicon/favicon.png">
+    <link rel="stylesheet" href="/styles/Durga Puja Art Years/durgapujaartyear.css">
+    <title>Events: <%= eventYear %></title>
+</head>
+<body>
+    
+    <!-- Header -->
+    <%- include('../partials/header.ejs') %>
+
+    <!-- Durga Puja Art Main Section -->
+    <div class="durga-puja-art-main-section">
+
+        <main>
+
+            <!-- Inner Section -->
+            <div class="durga-puja-art-main-inner-section">
+                
+                <% durgaPujaEvent.forEach((event) => { %> 
+
+                    <!-- Image Section -->
+                    <% if(event.event_year === eventYear) { %> 
+                    
+                        <div class="durga-puja-image-section">
+
+                            <img src="<%= event.event_image %>" alt="<%= event.event_image_alttext %>">
+
+                        </div>
+
+                        <% if(event.event_year === "2026") { %> 
+                        
+                            <!-- Button Bar -->
+                            <%- include('../partials/secondbuttonbar.ejs') %>
+
+                            <!-- Details Section -->
+                            <%- include('../partials/2026_details.ejs', {event: event}) %>
+
+                        <% } %>
+                        
+                    <% } %>
+                        
+                <% }) %>
+
+            </div>
+
+            <!-- Button Bar -->
+            <%- include('../partials/Buttonbar.ejs') %>
+
+            <!-- Proud Winner -->
+            <%- include('../partials/Proudwinner.ejs') %>
+
+        </main>
+
+        <!-- Footer -->
+        <%- include('../partials/footer.ejs')  %>
+
+    </div>
+
+</body>
+</html>

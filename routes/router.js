@@ -11,6 +11,8 @@ router.get('/skill-development', getRouterController.getObjectiveSkillDevelopmen
 router.get('/still', getRouterController.getGalleryStillImageRouter); // gallery still image router
 router.get('/video', getRouterController.getGalleryVideoRouter); // gallery video router
 router.get('/contact', getRouterController.getContactRouter); // contact router
-router.post('/api/send/form/:pageName', postRouterController.postContactForm); // Mail Router
+router.get('/:eventYear', getRouterController.getDurgaPujaArtEventYear); 
+router.post('/contact-form', postRouterController.postContactForm); // Contact Page Form Router
+router.post('/skill-development-form', postRouterController.postSkillDevelopmentForm); // Skill Development Page Form Router
 
 export default router;

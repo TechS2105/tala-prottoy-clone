@@ -6,6 +6,7 @@ import GalleryStillImagesApi from '../api/Still/still_api.js';
 import GalleryVideo from '../api/Video/gallery_video_api.js';
 import PromotionOfInstallationArt from '../api/Promotion Of Installation Art/promotion_of_installation_art.js';
 import SkillDevelopmentItems from '../api/Skill Development/skill_development_api.js';
+import DurgaPujaArtEvent from '../api/Durga Puja Art/durgapuja_art_api.js';
 
 /** Home Router */
 const getHomeRouter = (req, res) => {
@@ -85,11 +86,26 @@ const getObjectiveSkillDevelopment = (req, res) => {
 
     res.render('../views/Objective/Skill Development/skill_development.ejs', {
 
-        pageName: "skilldev",
+        pageName: "skill-development",
         proudParticipant: HomeProudParticipantApi,
         skillDevelopmentItem: SkillDevelopmentItems
 
     });
+
+}
+
+/** Event Year 2026 */
+const getDurgaPujaArtEventYear = (req, res) => {
+
+    const eventYear = req.params.eventYear;
+
+    res.render('../views/Durga Puja Art/durgapujaartyear.ejs', {
+        
+        eventYear: eventYear,
+        durgaPujaEvent: DurgaPujaArtEvent,
+        proudParticipant: HomeProudParticipantApi
+
+    }); 
 
 }
 
@@ -101,6 +117,7 @@ export default {
     getGalleryStillImageRouter,
     getGalleryVideoRouter,
     getObjectivePromotionOfInstallationArt,
-    getObjectiveSkillDevelopment
+    getObjectiveSkillDevelopment,
+    getDurgaPujaArtEventYear
 
 }

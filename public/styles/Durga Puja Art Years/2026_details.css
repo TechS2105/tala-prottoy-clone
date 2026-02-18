@@ -1,0 +1,103 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+/** Details Section */
+.details_section{
+
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+
+}
+
+/** Title Section */
+.details_section > .title-section{
+
+    width: 100%;
+    height: 80px;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.title-section > h1{
+
+    color: #ffffff;
+    letter-spacing: 1px;
+
+}
+
+/** Para Section */
+.details_section > .para-section{
+
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.para-section > p{
+
+    font-size: 15.8px;
+    color: #ffffffa5;
+    line-height: 28px;
+    width: 1100px;
+
+}
+
+/** General Entry Section */
+.details_section > .general-entry-section{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+/** General Entry Title Section */
+.general-entry-section > .general-entry-title-section{
+
+    width: 100%;
+    height: 30px;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.general-entry-title-section > h3{
+
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-size: 16px;
+
+}
+
+/** General Entry Date & Time Section */
+.general-entry-section > .general-entry-date-time-section{
+
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.general-entry-date-time-section .inner-date-time-section > p{
+
+    color: #ffffffa5;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+
+}

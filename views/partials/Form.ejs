@@ -10,23 +10,29 @@
     <!-- Form Section -->
     <div class="form-section">
 
-        <% if(pageName !== 'skilldev') { %> 
+        <% if(pageName !== 'skill-development') { %> 
         
             <span> Fill & Submit </span>
             
         <% } %>
 
-        <form action='/api/send/form/<%= pageName %>'  method="post">
+        <form action="<%= actionURL %>" method="post">
 
             <!-- First Input -->
             <div class="first-input">
 
                 <input type="text" id="name" placeholder="Your Name *" name="fullname" required>
+                
+                <% if(pageName === 'skill-development' && pageName !== 'contact'){ %>
+
+                    <input type="tel" id="mobile" name="mobile" placeholder="Number *" required>
+
+                <% } %>
 
             </div>
 
             <!-- Second Input -->
-            <% if(pageName === 'contact' || pageName === 'skilldev'|| pageName === 'artwork'){ %> 
+            <% if(pageName === 'contact' || pageName === 'skill-development'|| pageName === 'artwork'){ %> 
 
                 <div class="second-input">
 
@@ -38,7 +44,7 @@
                         
                     <% } %> 
                     
-                    <% if(pageName === 'skilldev') { %> 
+                    <% if(pageName === 'skill-development') { %> 
                     
                         <input type="text" id="specialiation" name="specialiation" placeholder="Specialiation *" required>
                         
@@ -49,7 +55,7 @@
             <% } %>
 
             <!-- Additional Inputs Page Wise -->
-            <% if(pageName === 'artwork' || pageName === 'privilegeentry' && pageName !== 'skilldev') { %> 
+            <% if(pageName === 'artwork' || pageName === 'privilegeentry' && pageName !== 'skill-development') { %> 
                 
                 <!-- Art Work Page Input -->
                 <div class="artwork-input">
@@ -118,7 +124,7 @@
             <% } %>
 
             <!-- Text Area -->
-            <% if(pageName === 'contact' || pageName === 'skilldev'){ %> 
+            <% if(pageName === 'contact' || pageName === 'skill-development'){ %> 
             
                 <div class="third-input">
 
