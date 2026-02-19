@@ -40,6 +40,13 @@
                             <%- include('../partials/2026_details.ejs', {event: event}) %>
 
                         <% } %>
+
+                        <% if(event.event_year !== "2026") { %> 
+                        
+                            <!-- Details Section -->
+                            <%- include('../partials/all_year_details.ejs', {event: event}) %>
+                            
+                        <% } %>
                         
                     <% } %>
                         

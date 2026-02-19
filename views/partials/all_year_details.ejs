@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/Durga Puja Art Years/all_year_details.css">
+</head>
+<body>
+    
+    <!-- Year Details Section -->
+    <div class="year-details-section">
+
+        <!-- Inner Section -->
+        <div class="inner-year-details-section">
+
+            <!-- Content Section -->
+            <div class="content-section ">
+
+                <!-- Title & Para Section-->
+                <div class="title-para-section">
+
+                    <h1> <%= event.event_year %> </h1>
+                    <h4><span>Title : </span><%= event.event_details[0].title %> </h4>
+                    <p><%= event.event_details[0].para %></p>
+
+                </div>
+
+                <!-- Other Details List Section -->
+                <div class="other-details-list-section">
+
+                    <ul>
+
+                        <% if(event.event_year !== "2025"){ %> 
+                            
+                            <li id="dpa_li_1"><span>Durga Puja Art By :</span> <%= event.event_details[0].other_details.durga_puja_art_by %> </li>
+
+                        <% } %>
+                        <li><span>Idol :</span> <%= event.event_details[0].other_details.idol %> </li>
+                        <li><span>Music :</span> <%= event.event_details[0].other_details.music %> </li>
+                        <li><span>Total Art Work Area :</span> <%= event.event_details[0].other_details.total_art_work_area %> </li>
+                        <li><span>Work Tenure :</span> <%= event.event_details[0].other_details.work_tenure %> </li>
+                        <li><span>Exhibited :</span> <%= event.event_details[0].other_details.exhibited %> </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Image Section -->
+                <div class="image-section">
+
+                    <!-- Inner Image Div -->
+                    <% event.event_sub_images.forEach((imgObj) => { %> 
+                    
+                        <div class="inner-image-div">
+
+                            <img src="<%= imgObj %>">
+
+                        </div>
+                        
+                    <% }) %>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
