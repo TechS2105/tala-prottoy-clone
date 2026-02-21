@@ -32,13 +32,13 @@
             </div>
 
             <!-- Second Input -->
-            <% if(pageName === 'contact' || pageName === 'skill-development'|| pageName === 'artwork'){ %> 
+            <% if(pageName === 'contact' || pageName === 'skill-development'|| pageName === 'art-walk-through' || pageName === 'privilege-entry'){ %> 
 
                 <div class="second-input">
 
                     <input type="email" id="mail" name="email"  placeholder="Your Email *" required>
 
-                    <% if(pageName === 'contact' || pageName === 'artwork'){ %> 
+                    <% if(pageName === 'contact' || pageName === 'art-walk-through' || pageName === 'privilege-entry'){ %> 
                     
                         <input type="tel" id="mobile" name="mobile"  placeholder="Your Number *" minlength="10" maxlength="10" required>
                         
@@ -55,7 +55,7 @@
             <% } %>
 
             <!-- Additional Inputs Page Wise -->
-            <% if(pageName === 'artwork' || pageName === 'privilegeentry' && pageName !== 'skill-development') { %> 
+            <% if(pageName === 'art-walk-through' || pageName === 'privilege-entry' && pageName !== 'skill-development') { %> 
                 
                 <!-- Art Work Page Input -->
                 <div class="artwork-input">
@@ -100,7 +100,7 @@
                 
             <% } %>
 
-            <% if(pageName === 'privilegeentry' && pageName !== 'artwork') { %> 
+            <% if(pageName === 'privilege-entry') { %> 
             
                 <!-- Reason Input -->
                 <div class="reason-input">

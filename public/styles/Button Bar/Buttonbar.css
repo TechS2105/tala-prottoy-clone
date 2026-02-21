@@ -24,3 +24,10 @@
     cursor: pointer;
 
 }
+
+.button-bar-section button > a{
+
+    color: #ffffff;
+    text-decoration: none;
+
+}

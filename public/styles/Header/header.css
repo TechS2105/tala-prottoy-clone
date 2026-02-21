@@ -27,6 +27,12 @@ header > .logosection{
 
 }
 
+.logosection > a{
+
+    display: inline-flex;
+
+}
+
 header > .navsection{
 
     width: 100%;

@@ -96,9 +96,106 @@ const postSkillDevelopmentForm = (req, res) => {
 
 }
 
+/** Art Walk Through Page Form */
+const postArtWalkThroughForm = (req, res) => {
+
+    const { fullname, email, mobile, address, guestno, date, time } = req.body;
+
+    const mail = {
+
+        from: `${fullname}`,
+        to: process.env.Mail,
+        subject: `${fullname} has been sent an email from art walk through form`,
+        html: `
+        
+            <p>Name: ${fullname}</p>
+            <p>Email: ${email}</p>
+            <p>Mobile: ${mobile}</p>
+            <p>Address: ${address}</p>
+            <p>Guest No: ${guestno}</p>
+            <p>Date: ${date}</p>
+            <p>Time: ${time}</p>
+
+        `
+
+    };
+
+    mailController.sendMail(mail, (error) => {
+
+        if (error) {
+
+            res.status(400).json({ message: error });
+
+        } else {
+            
+            res.json({
+
+                status: 200,
+                message: "Mail has been sent successfully"
+
+            });
+
+        }
+
+    });
+
+    res.redirect('/art-walk-through');
+
+}
+
+/** Privilege Entry Page Form */
+const postPrivilegeEntryFrom = (req, res) => {
+
+    const { fullname, email, mobile, address, guestno, date, time, reason } = req.body;
+    
+    const mail = {
+
+        from: `${fullname}`,
+        to: process.env.Mail,
+        subject: `${fullname} has been sent an email from privilege entry form`,
+        html: `
+        
+            <p>Name: ${fullname}</p>
+            <p>Email: ${email}</p>
+            <p>Mobile: ${mobile}</p>
+            <p>Address: ${address}</p>
+            <p>Guest No: ${guestno}</p>
+            <p>Date: ${date}</p>
+            <p>Time: ${time}</p>
+            <p>Reason: ${reason}</p>
+
+        `
+
+    };
+
+    mailController.sendMail(mail, (error) => {
+
+        if (error) {
+            
+            res.status(400).json({ message: error });
+
+        } else {
+            
+            res.json({
+
+                status: 200,
+                message: "Mail has been sent successfully..."
+
+            });
+
+        }
+
+    });
+
+    res.redirect('/privilege-entry');
+
+}
+
 export default {
 
     postContactForm,
-    postSkillDevelopmentForm
+    postSkillDevelopmentForm,
+    postArtWalkThroughForm,
+    postPrivilegeEntryFrom
 
 }

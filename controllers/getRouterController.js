@@ -7,6 +7,7 @@ import GalleryVideo from '../api/Video/gallery_video_api.js';
 import PromotionOfInstallationArt from '../api/Promotion Of Installation Art/promotion_of_installation_art.js';
 import SkillDevelopmentItems from '../api/Skill Development/skill_development_api.js';
 import DurgaPujaArtEvent from '../api/Durga Puja Art/durgapuja_art_api.js';
+import ArtwalkthroughPrivilegeEntryApi from '../api/Art Walk Through & Privilege Entry/art_walk_through_privilege_entry_api.js';
 
 /** Home Router */
 const getHomeRouter = (req, res) => {
@@ -109,6 +110,23 @@ const getDurgaPujaArtEventYear = (req, res) => {
 
 }
 
+/** Art Workthrough & Privilege Entry */
+const getArtWorkthroughPrivilegeEntry = (req, res) => {
+
+    const artWorkPrivilegeEntryPage = req.params.artWorkPrivilegeEntryPage;
+    const pageSlug = artWorkPrivilegeEntryPage.trim().toLowerCase().replace(/\s/g, "-");
+
+    res.render('../views/partials/art_workthrough_privilege_entry.ejs', {
+
+        artWorkPrivilegeEntryPage: pageSlug,
+        artPrivilegeData: ArtwalkthroughPrivilegeEntryApi,
+        proudParticipant: HomeProudParticipantApi,
+        pageName: pageSlug
+
+    });
+
+}
+
 export default {
 
     getHomeRouter,
@@ -118,6 +136,7 @@ export default {
     getGalleryVideoRouter,
     getObjectivePromotionOfInstallationArt,
     getObjectiveSkillDevelopment,
-    getDurgaPujaArtEventYear
+    getDurgaPujaArtEventYear,
+    getArtWorkthroughPrivilegeEntry
 
 }

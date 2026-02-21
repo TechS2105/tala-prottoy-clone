@@ -136,5 +136,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.5s ease;
+
+}
+
+.inner-image-div > img:hover{
+
+    filter: brightness(50%);
+    cursor: pointer;
 
 }

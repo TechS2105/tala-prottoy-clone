@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/Favicon/favicon.png">
+    <title><%= artWorkPrivilegeEntryPage.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') %></title>
+    <link rel="stylesheet" href="/styles/Art Workthrough & Privilege Entry/art_workthrough_privilege_entry.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <%- include('../partials/header.ejs') %>
+
+    <!-- Art Walkthrough & Privilege Entry Parent Section -->
+    <div class="ap-parent-section">
+
+        <main>
+
+            <!-- Inner Section -->
+            <% artPrivilegeData.forEach((data) => { %> 
+                
+                <% if(artWorkPrivilegeEntryPage === data.page_name.trim().toLowerCase().replace(/\s/g, "-") || artWorkPrivilegeEntryPage === data.page_name) { %> 
+                
+                    <div class="inner-section">
+
+                        <!-- Image Section -->
+                        <div class="image-section">
+
+                            <img src="<%= data.page_hero_image %>" alt="<%= data.page_hero_image_alttext %>">
+
+                        </div>
+
+                        <!-- Content Section -->
+                        <div class="content-section">
+
+                            <!-- Title Section -->
+                            <div class="title-section">
+
+                                <h1> <%= data.page_name %> </h1>
+
+                            </div>
+
+                            <!-- Form & List Parent Section -->
+                            <div class="form-list-parent-section">
+
+                                <!-- Sub Title Section -->
+                                <div class="sub-title-section">
+
+                                    <h4> <%= data.page_name %> </h4>
+
+                                </div>
+
+                                <!-- Inner Form & List Main Section -->
+                                <div class="inner-form-list-main-section">
+
+                                    <!-- Form Section -->
+                                    <% if(artWorkPrivilegeEntryPage.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') === data.page_name || artWorkPrivilegeEntryPage.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') === data.page_name) { %>
+
+                                        <div class="form-section">
+
+                                            <%- include('../partials/Form.ejs', {actionURL: artWorkPrivilegeEntryPage === 'art-walk-through' ? '/art-walk-through-form' : '/privilege-entry-form', pageName: artWorkPrivilegeEntryPage === pageName ? artWorkPrivilegeEntryPage : null}) %>
+
+                                        </div>
+
+                                    <% } %>
+
+                                    <!-- List Section-->
+                                    <div class="list-section">
+
+                                        <ul>
+
+                                            <% data.other_details_list.forEach((listObj) => { %> 
+                                                
+                                                    <li><%= listObj %></li>
+
+                                            <% }) %>
+                            
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                <% } %>
+                    
+            <% }) %>
+
+            <!-- Button Bar -->
+            <%- include('../partials/Buttonbar.ejs') %>
+
+            <!-- Proud Winner -->
+            <%- include('../partials/Proudwinner.ejs') %>
+
+        </main>
+
+        <!-- Footer -->
+        <%- include('../partials/footer.ejs') %>
+
+    </div>
+
+</body>
+</html>
