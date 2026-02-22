@@ -1,0 +1,150 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+/** Art & Artist Section */
+.art-artist-section{
+
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+/** Title Section */
+.art-artist-section > .title-section{
+
+    width: 95%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.title-section > h1{
+
+    font-size: 45px;
+    color: #ffffffca;
+    font-weight: 500;
+
+}
+
+/** Para Section */
+.art-artist-section > .para-section{
+
+    width: 95%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.para-section > p{
+
+    color: #ffffff82;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 500;
+
+}
+
+/** Artist Section */
+.art-artist-section > .artist-section{
+
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/** Title Section */
+.artist-section > .title-section{
+
+    width: 100%;
+    height: 60px;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.title-section > h2{
+
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.76);
+    font-weight: 500;
+    letter-spacing: 1px;
+
+}
+
+/** Artist Image Section */
+.artist-section > .artist-image-section{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 30px;
+
+}
+
+.artist-image-section > img{
+
+    width: 400px;
+    height: 550px;
+    object-fit: cover;
+
+}
+
+.artist-image-section > span{
+
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 1px;
+
+}
+
+/** Artist Details Section */
+.artist-section > .artist-details-section{
+
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.artist-details-section > .artist-details-inner-box{
+
+    width: 95%;
+    height: 100%;
+
+}
+
+.artist-details-inner-box > p{
+
+    color: #ffffff82;
+    font-size: 17px;
+    line-height: 25px;
+
+}

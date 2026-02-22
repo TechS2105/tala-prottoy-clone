@@ -13,6 +13,7 @@ router.get('/video', getRouterController.getGalleryVideoRouter); // gallery vide
 router.get('/contact', getRouterController.getContactRouter); // contact router
 router.get('/durga-puja-art/event/:eventYear', getRouterController.getDurgaPujaArtEventYear); // durga puja art year dynamic router
 router.get('/:artWorkPrivilegeEntryPage', getRouterController.getArtWorkthroughPrivilegeEntry); // art work and privilege entry router
+router.get('/2026/:planArtAdvertisementPage', getRouterController.getPlanArtAdvertisement); // dynamic plan art & advertisement router
 router.post('/contact-form', postRouterController.postContactForm); // contact page form router
 router.post('/skill-development-form', postRouterController.postSkillDevelopmentForm); // skill development page form router
 router.post('/art-walk-through-form', postRouterController.postArtWalkThroughForm); // art walk trhough page form router

@@ -8,6 +8,7 @@ import PromotionOfInstallationArt from '../api/Promotion Of Installation Art/pro
 import SkillDevelopmentItems from '../api/Skill Development/skill_development_api.js';
 import DurgaPujaArtEvent from '../api/Durga Puja Art/durgapuja_art_api.js';
 import ArtwalkthroughPrivilegeEntryApi from '../api/Art Walk Through & Privilege Entry/art_walk_through_privilege_entry_api.js';
+import PlanArtAdvertisementApi from '../api/Plan Art & Advertisement/plan_art_advertisement_api.js';
 
 /** Home Router */
 const getHomeRouter = (req, res) => {
@@ -127,6 +128,23 @@ const getArtWorkthroughPrivilegeEntry = (req, res) => {
 
 }
 
+/** Plan Art & Advertisement */
+const getPlanArtAdvertisement = (req, res) => {
+
+    const planArtAdvertisementPage = req.params.planArtAdvertisementPage;
+    const pageSlug = planArtAdvertisementPage.trim().toLowerCase().replace(/\s/g, "-");
+
+    res.render('../views/partials/plan_art_advertisement_page.ejs', {
+
+        planArtAdvertisementPage: pageSlug,
+        plan_art_advertisement: PlanArtAdvertisementApi,
+        proudParticipant: HomeProudParticipantApi,
+        pageName: pageSlug
+
+    });
+
+}
+
 export default {
 
     getHomeRouter,
@@ -137,6 +155,7 @@ export default {
     getObjectivePromotionOfInstallationArt,
     getObjectiveSkillDevelopment,
     getDurgaPujaArtEventYear,
-    getArtWorkthroughPrivilegeEntry
+    getArtWorkthroughPrivilegeEntry,
+    getPlanArtAdvertisement
 
 }

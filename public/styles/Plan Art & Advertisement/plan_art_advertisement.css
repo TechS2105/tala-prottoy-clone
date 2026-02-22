@@ -1,0 +1,57 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+
+}
+
+body{
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #101010;
+
+}
+
+/** Plan Art & Advertisement Main Parent Section */
+.plan-art-advertisement-main-parent-section{
+
+    width: 77%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+.plan-art-advertisement-main-parent-section main > .plan-art-advertisement-inner-section{
+
+    width: 100%;
+    height: 100%;
+    padding: 100px 0px 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+/** Plan Art Advertisement Image Section */
+.plan-art-advertisement-inner-section > .plan-art-advertisement-image-section{
+
+    width: 95%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.plan-art-advertisement-image-section > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+
+}
