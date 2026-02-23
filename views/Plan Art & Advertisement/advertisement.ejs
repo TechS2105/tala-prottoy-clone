@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/Plan Art & Advertisement/advertisement.css">
+</head>
+<body>
+    
+    <!-- Advertisement Section -->
+    <div class="advertisement_section">
+
+        <!-- Title & Para Section -->
+        <div class="title-para-main-section">
+
+            <!-- Title -->
+            <div class="title-section">
+
+                <h1><%= pageData.advertisement_details[0].title %> </h1>
+
+            </div>
+
+            <!-- Para -->
+            <div class="para-section">
+
+                <p><%= pageData.advertisement_details[0].para %></p>
+
+            </div>
+
+        </div>
+
+        <!-- Form & Sidebar Section -->
+        <div class="form-sidebar-section">
+
+            <!-- Form -->
+            <div class="form-section">
+
+                <%- include('../partials/Form.ejs', {pageName: 'advertisement', actionURL: '/advertisement-form'}) %>
+                
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar-section">
+
+                <button><a href="#"><%= pageData.advertisement_details[1].first_button_text %></a></button>
+                <button><a href="#"><%= pageData.advertisement_details[1].second_button_text %></a></button>
+                <iframe width="350" height="230" src="<%= pageData.advertisement_details[1].video_link %>" title="<%= pageData.advertisement_details[1].video_title %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

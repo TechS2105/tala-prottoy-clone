@@ -21,7 +21,11 @@
             <!-- First Input -->
             <div class="first-input">
 
-                <input type="text" id="name" placeholder="Your Name *" name="fullname" required>
+                <% if(pageName !== 'advertisement'){ %> 
+                
+                    <input type="text" id="name" placeholder="Your Name *" name="fullname" required>
+                    
+                <% } %> 
                 
                 <% if(pageName === 'skill-development' && pageName !== 'contact'){ %>
 
@@ -122,6 +126,146 @@
                 </div>
                 
             <% } %>
+
+            <% if(pageName === 'advertisement'){ %> 
+            
+                <!-- Advertisement Page Form -->
+                <div class="advertisement-page-form">
+
+                    <!-- Form Input Box Section -->
+                    <div class="form-input-box-section">
+
+                        <!-- Company Name -->
+                        <div class="company-name-input">
+
+                            <input type="text" placeholder="Company Name *" id="company-name" name="companyname" required>
+
+                        </div>
+
+                        <!-- Contact Person Name -->
+                        <div class="contact-person-name">
+
+                            <input type="text" placeholder="Contact Person Name *" id="contact-person-name" name="contactpersonname" required> 
+
+                        </div>
+
+                        <!-- Designation -->
+                        <div class="designation">
+
+                            <input type="text" placeholder="Designation *" id="designation" name="designation" required>
+
+                        </div>
+
+                        <!-- Contact No -->
+                        <div class="contact-no">
+
+                            <input type="tel" placeholder="Contact No. *" id="mobile" name="mobile" required>
+
+                        </div>
+
+                        <!-- Email -->
+                        <div class="email">
+
+                            <input type="email" placeholder="Email *" id="email" name="email" required>
+
+                        </div>
+
+                    </div>
+                    
+                    <!-- Interested Check Box Section -->
+                    <div class="interested-check-box-section">
+
+                        <h3> Interested in </h3>
+
+                        <ul>
+
+                            <li>
+                                
+                                <span>
+
+                                    <input type="checkbox" name="interested[]" value="Led Wowt"> Led Wowt
+
+                                </span>
+                                
+                                <span>
+
+                                    <input type="checkbox" name="interested[]" id="Led Anamorphic"> Led Anamorphic
+
+                                </span>
+                            
+                            </li>
+
+                            <li>
+                                
+                                <span>
+
+                                    <input type="checkbox" name="interested[] " value="Led Sky High "> Led Sky High
+
+                                </span>
+                                
+                                <span>
+
+                                    <input type="checkbox" name="interested[]" value="Overhead Gate"> Overhead Gate
+
+                                </span>
+                            
+                            </li>
+
+                            <li>
+                                
+                                <span>
+
+                                    <input type="checkbox" name="interested[]" value="Tunnel"> Tunnel
+
+                                </span>
+                                
+                                <span>
+
+                                    <input type="checkbox" name="interested[]" value="Side Wall"> Side Wall
+
+                                </span>
+                            
+                            </li>
+
+                            <li>
+                                
+                                <span>
+
+                                    <input type="checkbox" name="interested[]" value="Hoarding"> Hoarding
+
+                                </span>
+                                
+                                <span>
+
+                                    <input type="checkbox" name="interested[]" value="Back-lit Tower"> Back-lit Tower
+
+                                </span>
+                            
+                            </li>
+
+                            <li>
+                                
+                                <span>
+
+                                    <input type="checkbox" name="interested[]" value="Drop Down"> Drop Down
+
+                                </span>
+                                
+                                <span>
+
+                                    <input type="checkbox" name="interested[]" value="Pavilion"> Pavilion
+
+                                </span>
+                            
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+                
+            <% } %> 
 
             <!-- Text Area -->
             <% if(pageName === 'contact' || pageName === 'skill-development'){ %> 

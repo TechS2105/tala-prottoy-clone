@@ -44,8 +44,14 @@
                         <!-- Art & Artist -->
                         <% if(plan_art_advertisement_data.page_name === 'Art & Artist'){ %>
                         
-                            <%- include('../Plan Art & Advertisement/art_artist.ejs') %>
+                            <%- include('../Plan Art & Advertisement/art_artist.ejs', {pageData: plan_art_advertisement_data}) %>
                         
+                        <% } %>
+
+                        <% if(plan_art_advertisement_data.page_name === 'Advertisement') { %> 
+                        
+                            <%- include('../Plan Art & Advertisement/advertisement.ejs', {pageData: plan_art_advertisement_data}) %>
+                            
                         <% } %>
 
                     </div> 

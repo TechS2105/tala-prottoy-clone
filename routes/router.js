@@ -11,12 +11,13 @@ router.get('/skill-development', getRouterController.getObjectiveSkillDevelopmen
 router.get('/still', getRouterController.getGalleryStillImageRouter); // gallery still image router
 router.get('/video', getRouterController.getGalleryVideoRouter); // gallery video router
 router.get('/contact', getRouterController.getContactRouter); // contact router
-router.get('/durga-puja-art/event/:eventYear', getRouterController.getDurgaPujaArtEventYear); // durga puja art year dynamic router
-router.get('/:artWorkPrivilegeEntryPage', getRouterController.getArtWorkthroughPrivilegeEntry); // art work and privilege entry router
+router.get('/durga-puja-art/event/:eventYear', getRouterController.getDurgaPujaArtEventYear); // dynamic durga puja art year dynamic router
+router.get('/:artWorkPrivilegeEntryPage', getRouterController.getArtWorkthroughPrivilegeEntry); // dynamic art work and privilege entry router
 router.get('/2026/:planArtAdvertisementPage', getRouterController.getPlanArtAdvertisement); // dynamic plan art & advertisement router
 router.post('/contact-form', postRouterController.postContactForm); // contact page form router
 router.post('/skill-development-form', postRouterController.postSkillDevelopmentForm); // skill development page form router
 router.post('/art-walk-through-form', postRouterController.postArtWalkThroughForm); // art walk trhough page form router
 router.post('/privilege-entry-form', postRouterController.postPrivilegeEntryFrom); // privilege entry page form router
+router.post('/advertisement-form', postRouterController.postAdvertisementForm); // advertisement page form router
 
 export default router;

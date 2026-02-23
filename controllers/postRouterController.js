@@ -191,11 +191,58 @@ const postPrivilegeEntryFrom = (req, res) => {
 
 }
 
+/** Advertisement Page Form  */
+const postAdvertisementForm = (req, res) => {
+
+    const { companyname, contactpersonname, designation, mobile, email, interested } = req.body;
+
+    const mail = {
+
+        from: `${contactpersonname}`,
+        to: process.env.Mail,
+        subject: `${contactpersonname} has been sent an email from advertisement form`,
+        html: `
+        
+            <p>Company Name: ${companyname}</p>
+            <p>Contact Person Name: ${contactpersonname}</p>
+            <p>Designation: ${designation}</p>
+            <p>Mobile: ${mobile}</p>
+            <p>Email: ${email}</p>
+            <p>Interested In: ${interested}</p>
+
+        `
+        
+    };
+
+    mailController.sendMail(mail, (error) => {
+
+        if (error) {
+
+            res.status(400).json({ message: error });
+
+        } else {
+            
+            res.json({
+
+                status: 200,
+                message: 'Mail has been sent successfully'
+
+            })
+
+        }
+
+    });
+
+    res.redirect('/2026/advertisement');
+
+}
+
 export default {
 
     postContactForm,
     postSkillDevelopmentForm,
     postArtWalkThroughForm,
-    postPrivilegeEntryFrom
+    postPrivilegeEntryFrom,
+    postAdvertisementForm
 
 }

@@ -61,9 +61,10 @@ const plan_art_advertisement_api = [
             {
 
                 title: 'Artist',
-                image: '/images/Art Image/artist_image.jpg',
+                artist_image: '/images/Art Image/artist_image.jpg',
+                artist_image_alttext: 'Artist',
                 artist_name: 'Bhabatosh Sutar',
-                para: 'Born in 1974. Graduated from the Government College of Art & Craft, Kolkata in 2000. He delved into the genre of Durga Puja art and has received critical acclaim for his creative talent. He has created a body of ephemeral art for more than two decades which have crossed barriers and boundaries of public art and moved millions of people through his experiential design. He is one of the key members of Chanderhaat collective which is involved in the process of investigating, exploring and living in the surrounding of Sarsuna, Kolkata which is an unique blend of urban, moffusil and rural. It is a habitation which is in itself an universe of migratory stories and revelations.'
+                artist_details: 'Born in 1974. Graduated from the Government College of Art & Craft, Kolkata in 2000. He delved into the genre of Durga Puja art and has received critical acclaim for his creative talent. He has created a body of ephemeral art for more than two decades which have crossed barriers and boundaries of public art and moved millions of people through his experiential design. He is one of the key members of Chanderhaat collective which is involved in the process of investigating, exploring and living in the surrounding of Sarsuna, Kolkata which is an unique blend of urban, moffusil and rural. It is a habitation which is in itself an universe of migratory stories and revelations.'
 
             },
 
@@ -84,6 +85,15 @@ const plan_art_advertisement_api = [
 
                 title: 'Advertisement',
                 para: 'For corporate and business houses Tala Prattoy is now a potential and prospective arena for eye catching innovative branding and advertisement. Creative and customised brand promotion and brand establishment is the core area of our advertisement.'
+
+            },
+
+            {
+
+                first_button_text: 'Proposal of Durga Puja',
+                second_button_text: 'Proposal of Music in Park',
+                video_link: 'https://www.youtube.com/embed/zGbTFiA7irY?si=SUE2_r-l44dcQ1VR',
+                video_title: 'YouTube video player'
 
             }
 
