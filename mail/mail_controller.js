@@ -10,7 +10,7 @@ const mail_controller = nodeMailer.createTransport({
     port: 587,
     logger: false,
     debug: true,
-    secure: false,
+    secure: true,
     secureConnection: true,
     auth: {
 
