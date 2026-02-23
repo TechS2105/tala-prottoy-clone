@@ -5,13 +5,13 @@ dotenv.config();
 
 const mail_controller = nodeMailer.createTransport({
 
-    service: 'gmail',
+    // service: 'gmail',
     host: 'smtp.gmail.com',
     port: 587,
     logger: false,
     debug: true,
-    secure: true,
-    secureConnection: true,
+    secure: false,
+    // secureConnection: true,
     auth: {
 
         user: process.env.Mail,
@@ -20,7 +20,7 @@ const mail_controller = nodeMailer.createTransport({
     },
     tls: {
 
-        rejectUnauthorized: true
+        rejectUnauthorized: false
 
     }
 

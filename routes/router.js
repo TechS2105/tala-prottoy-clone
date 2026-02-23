@@ -18,6 +18,6 @@ router.post('/contact-form', postRouterController.postContactForm); // contact p
 router.post('/skill-development-form', postRouterController.postSkillDevelopmentForm); // skill development page form router
 router.post('/art-walk-through-form', postRouterController.postArtWalkThroughForm); // art walk trhough page form router
 router.post('/privilege-entry-form', postRouterController.postPrivilegeEntryFrom); // privilege entry page form router
-router.post('https://tala-prattoy-clone.onrender.com/advertisement-form', postRouterController.postAdvertisementForm); // advertisement page form router
+router.post('/advertisement-form', postRouterController.postAdvertisementForm); // advertisement page form router
 
 export default router;
